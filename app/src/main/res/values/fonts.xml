@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseTextAppearance">
+        <item name="fontFamily">@font/librefranklin_regular</item>
+    </style>
+
+    <style name="TTBody" parent="BaseTextAppearance">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TTBody.Medium">
+        <item name="fontFamily">@font/librefranklin_medium</item>
+    </style>
+
+
+    <style name="TTSubtitle" parent="BaseTextAppearance">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TTSubtitle.Medium">
+        <item name="fontFamily">@font/librefranklin_medium</item>
+    </style>
+
+    <style name="TTCaption">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TTH6">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TTH6.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/librefranklin_medium</item>
+    </style>
+
+    <style name="TTH5">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+
+    <style name="TTH5.Medium">
+        <item name="fontFamily">@font/librefranklin_medium</item>
+    </style>
+
+
+    <style name="TTH5.Black">
+        <item name="fontFamily">@font/librefranklin_black</item>
+    </style>
+
+
+    <style name="TTH4">
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="TTH4.Black">
+        <item name="fontFamily">@font/librefranklin_black</item>
+    </style>
+</resources>

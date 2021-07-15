@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Tabemono Tabetai</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_home_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="hello_dashboard_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="hello_notifications_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="title_home">Home</string>
+    <string name="title_bookmark">Bookmark</string>
+    <string name="title_settings">Settings</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="search_hint">Find your next craving</string>
+    <string name="share">share</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="nutrients">Nutrients</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="bookmarked">Bookmarked</string>
+    <string name="visit">Visit</string>
+    <string name="share_icon_content_desc">Share Icon</string>
+    <string name="retry">Retry</string>
+    <string name="retry_subtitle">Something went wrong.\nPlease try again later.</string>
+    <string name="retry_title">Oops!</string>
+</resources>

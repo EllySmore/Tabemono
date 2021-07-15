@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/categoriesTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/category_tablayout_height"
+        android:visibility="gone"
+        app:tabIndicatorColor="@color/mustard"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable"
+        tools:visibility="visible" />
+
+    <include
+        android:id="@+id/error_page"
+        layout="@layout/error_page"
+        android:visibility="gone" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        shimmer:duration="800">
+
+        <!-- Adding 7 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/categoriesShimmer"
+                layout="@layout/home_categories_placeholder_layout" />
+
+            <include layout="@layout/home_image_placeholder_layout" />
+
+            <include layout="@layout/home_image_placeholder_layout" />
+
+            <include layout="@layout/home_image_placeholder_layout" />
+
+            <include layout="@layout/home_image_placeholder_layout" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:visibility="gone" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@+id/splash_screen">
+
+    <fragment
+        android:id="@+id/splash_screen"
+        android:name="com.terraformcreatives.tabemonotabetai.ui.splash.SplashPage"
+        android:label="fragment_splash"
+        tools:layout="@layout/splash_page">
+        <action
+            android:id="@+id/action_go_home"
+            app:destination="@id/home"
+            app:popUpTo="@id/splash_screen"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.terraformcreatives.tabemonotabetai.ui.home.HomePage"
+        android:label="fragment_home"
+        tools:layout="@layout/home_page">
+        <action
+            android:id="@+id/action_query_recipe"
+            app:destination="@id/search"
+            app:popUpTo="@id/home" />
+
+        <action
+            android:id="@+id/action_view_recipe"
+            app:destination="@id/detailed_recipe"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popUpTo="@id/home" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/search"
+        android:name="com.terraformcreatives.tabemonotabetai.ui.search.SearchPage"
+        android:label="fragment_search"
+        tools:layout="@layout/search_page">
+        <action
+            android:id="@+id/action_view_recipe"
+            app:destination="@id/detailed_recipe"
+            app:popUpTo="@id/search"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <dialog
+        android:id="@+id/detailed_recipe"
+        android:name="com.terraformcreatives.tabemonotabetai.ui.recipe.DetailedRecipePage"
+        android:label="fragment_search"
+        tools:layout="@layout/detailed_recipe_page">
+        <argument
+            android:name="recipeId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </dialog>
+
+</navigation>
